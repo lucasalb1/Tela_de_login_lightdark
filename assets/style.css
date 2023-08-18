@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+ --color-light-50: #f8fafc;
+
+ --color-dark-50: #797984;
+ --color-dark-100: #312d37;
+ --color-dark-900: #000;
+
+ --color-purple-50: #7c3aed;
+ --color-purple-100: #a855f7;
+ --color-purple-200: #bf46ef;
+
+ --color-gradient: linear-gradient(to right, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
+}
+
+section{
+    background: var(--color-gradient);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 40px;
+    gap: 25px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.603);
+    border-radius: 4px;
+    height: 450px;
+    animation: dark-to-light 0.3s ease-in-out;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.head h2{
+    font-size: 40px;
+    position: relative;
+    font-weight: 500;
+}
+
+.head h2::before{
+    position: absolute;
+    content: " ";
+    width: 40%;
+    background: var(--color-purple-50);
+    height: 3px;
+    bottom: 10px;
+    border-radius: 5px;
+}
+
+.head i{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.social{
+    display: flex;
+    gap: 30px;
+    margin: -10px;
+}
+.social img:hover{
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.09);
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label{
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input i{
+    font-size: 17px;
+    color: var(--color-dark-900);
+}
+.field{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-purple-50);
+}
+
+.field input{
+    border: none;
+    background-color: transparent;
+    width: 220px;
+    font-size: 16px;
+    padding: 0px 5px;
+}
+.field input:focus{
+    outline: none;
+}
+
+.esqueceu a{
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--color-dark-100);
+    display: flex;
+    position: relative;
+    left: -40px;
+    top: -10px;
+}
+.esqueceu a:hover{
+    color: var(--color-purple-50);
+}
+
+.button{
+    border: none;
+    background: var(--color-gradient);
+    padding: 3px;
+    font-size: 17px;
+    width: 250px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    margin: -10px 3px 0px 3px;
+}
+
+.button:hover{
+    transform: scale(1.03);
+}
+
+.dark.login{
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+.dark.login .field input,
+.dark.login .field i{
+    color: var(--color-light-50);
+}
+@keyframes dark-to-light{
+     0%{
+        background-color: var(--color-dark-100);
+     }
+     100%{
+        background-color: var(--color-light-50);
+     }
+}
+@keyframes light-to-dark{
+    0%{
+        background-color: var(--color-light-50);
+    }
+    100%{
+        background-color: var(--color-dark-100);
+    }
+}
+
+
